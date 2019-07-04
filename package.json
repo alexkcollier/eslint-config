@@ -10,7 +10,8 @@
   },
   "scripts": {
     "lint": "eslint . --config=index.js",
-    "release": "standard-version && git push --follow-tags && yarn publish --non-interactive"
+    "release": "standard-version && git push --follow-tags && yarn publish --non-interactive",
+    "test": "echo \"No tests configured\""
   },
   "devDependencies": {
     "eslint": ">=5.16.0",
