@@ -3,33 +3,89 @@ module.exports = {
     browser: true,
     node: true,
   },
-  extends: ['standard'],
-  plugins: ['standard'],
+  extends: [
+    'standard',
+  ],
+  plugins: [
+    'standard',
+  ],
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.js', '.mjs'],
+        extensions: [
+          '.js',
+          '.mjs',
+        ],
       },
     },
   },
   rules: {
-    'array-bracket-newline': ['error', 'consistent'],
-    'array-element-newline': ['error', 'consistent'],
-    'arrow-parens': [2, 'as-needed', { requireForBlockBody: true }],
-    camelcase: ['warn', { ignoreDestructuring: true }],
-    'comma-dangle': ['error', 'always-multiline'],
+    'array-bracket-newline': [
+      'error',
+      'consistent',
+    ],
+    'array-callback-return': [
+      'error',
+      { allowImplicit: true },
+    ],
+    'array-element-newline': [
+      'error',
+      'consistent',
+    ],
+    'arrow-parens': [
+      'error',
+      'as-needed',
+      {
+        requireForBlockBody: true,
+      },
+    ],
+    camelcase: [
+      'warn',
+      {
+        ignoreDestructuring: true,
+      },
+    ],
+    'comma-dangle': [
+      'error',
+      'always-multiline',
+    ],
+    'default-param-last': 'error',
+    'guard-for-in': 'error',
     'max-len': [
       'error',
       {
         code: 100,
+        ignoreComments: false,
+        ignoreRegExpLiterals: true,
         ignoreStrings: true,
+        ignoreTemplateLiterals: true,
         ignoreUrls: true,
-        ignoreComments: true,
       },
     ],
-    'no-console': 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 0,
-    'no-return-assign': ['error', 'always'],
+    'newline-per-chained-call': [
+      'error',
+      {
+        ignoreChainWithDepth: 2,
+      },
+    ],
+    'no-alert': 'warn',
+    'no-loop-func': 'error',
+    'no-nested-ternary': 'error',
+    'no-return-assign': [
+      'error',
+      'always',
+    ],
+    'no-shadow': 'error',
+    'no-unused-vars': [
+      'error',
+      {
+        vars: 'all',
+        args: 'after-used',
+        ignoreRestSiblings: true,
+      },
+    ],
+    'no-return-await': 'error',
+    'no-script-url': 'error',
     'object-curly-newline': [
       'error',
       {
@@ -37,5 +93,27 @@ module.exports = {
         multiline: true,
       },
     ],
+    'object-shorthand': [
+      'error',
+      'always',
+    ],
+    'prefer-rest-params': 'error',
+    radix: 'error',
+    'require-await': 'off',
+    semi: [
+      'error',
+      'always',
+    ],
+    'semi-spacing': [
+      'error',
+      {
+        before: false,
+        after: true,
+      },
+    ],
+    'semi-style': [
+      'error',
+      'last',
+    ],
   },
-}
+};
